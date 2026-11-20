@@ -1,0 +1,5 @@
+model,params,size_MB,train_s,infer_ms,hardware
+cnn_bilstm,144518.0,0.586,47.805,1.086,"GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"
+resnet1d,183971.0,0.764,76.916,2.911,"GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"
+rf,109280.0,12.348,1.266,52.321,"GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"
+transformer,105670.0,0.457,49.927,5.518,"GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"

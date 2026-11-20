@@ -1,0 +1,5 @@
+name: resnet1d
+model:
+  name: resnet1d
+  params: {widths: [32, 64, 128], blocks: [1, 1, 1], kernel: 5, dropout: 0.3, use_se: true, use_attn_pool: true}
+tune_grid: {train.lr: [0.003, 0.001, 0.0003]}

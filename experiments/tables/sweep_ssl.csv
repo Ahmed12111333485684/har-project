@@ -1,0 +1,6 @@
+model,variant,val_f1,seeds
+transformer,pretrained=checkpoints-transformer_ssl.pt_label_fraction=0.1,0.972 ± 0.003,3
+transformer,pretrained=checkpoints-transformer_ssl.pt_label_fraction=1.0,0.984 ± 0.005,3
+transformer,pretrained=null_label_fraction=0.1,0.968 ± 0.015,3
+transformer,pretrained=null_label_fraction=1,0.982 ± 0.004,3
+transformer,pretrained=null_label_fraction=1.0,0.982 ± 0.004,3

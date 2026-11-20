@@ -1,0 +1,3 @@
+name: rf
+model: {name: rf, params: {n_estimators: 300, max_depth: null}}
+tune_grid: {model.params.max_depth: [10, 20, null]}     # 3 trials = same budget as DL models

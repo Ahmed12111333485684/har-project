@@ -1,0 +1,297 @@
+{
+  "cost": {
+    "params": 183971,
+    "size_mb": 0.764305,
+    "train_time_s": 24.097118377685547,
+    "inference_ms_per_window": 3.331521500076633,
+    "hardware": "GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"
+  },
+  "epochs_run": 19,
+  "best_epoch": 7,
+  "val": {
+    "macro_f1": 0.9855036227920762,
+    "accuracy": 0.9842931937172775,
+    "balanced_accuracy": 0.985527631907977,
+    "per_class": {
+      "Walking": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 336
+      },
+      "Upstairs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 302
+      },
+      "Downstairs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 274
+      },
+      "Sitting": {
+        "precision": 0.952,
+        "recall": 0.9596774193548387,
+        "f1": 0.9558232931726908,
+        "support": 372
+      },
+      "Standing": {
+        "precision": 0.9609375,
+        "recall": 0.9534883720930233,
+        "f1": 0.9571984435797666,
+        "support": 387
+      },
+      "Laying": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 430
+      }
+    },
+    "confusion_matrix": [
+      [
+        336,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        302,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        274,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        357,
+        15,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        369,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        430
+      ]
+    ]
+  },
+  "test": {
+    "macro_f1": 0.9143345833782647,
+    "accuracy": 0.9138106549032915,
+    "balanced_accuracy": 0.9154826460450732,
+    "per_class": {
+      "Walking": {
+        "precision": 1.0,
+        "recall": 0.9334677419354839,
+        "f1": 0.9655891553701773,
+        "support": 496
+      },
+      "Upstairs": {
+        "precision": 0.9797752808988764,
+        "recall": 0.9256900212314225,
+        "f1": 0.9519650655021834,
+        "support": 471
+      },
+      "Downstairs": {
+        "precision": 0.8731808731808732,
+        "recall": 1.0,
+        "f1": 0.9322974472807991,
+        "support": 420
+      },
+      "Sitting": {
+        "precision": 0.8279569892473119,
+        "recall": 0.7841140529531568,
+        "f1": 0.805439330543933,
+        "support": 491
+      },
+      "Standing": {
+        "precision": 0.8144144144144144,
+        "recall": 0.849624060150376,
+        "f1": 0.8316467341306347,
+        "support": 532
+      },
+      "Laying": {
+        "precision": 0.9981412639405205,
+        "recall": 1.0,
+        "f1": 0.9990697674418605,
+        "support": 537
+      }
+    },
+    "confusion_matrix": [
+      [
+        463,
+        7,
+        26,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        436,
+        35,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        420,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        385,
+        103,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        80,
+        452,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        537
+      ]
+    ],
+    "macro_f1_ci95_subject_bootstrap": [
+      0.8357632944360845,
+      0.9726346559133527
+    ]
+  },
+  "model": "resnet1d",
+  "seed": 0,
+  "config": {
+    "data": {
+      "root": "data/raw",
+      "channels": "all",
+      "window_len": 128,
+      "val_subjects": 6,
+      "split_seed": 0
+    },
+    "train": {
+      "epochs": 60,
+      "batch_size": 64,
+      "lr": 0.003,
+      "weight_decay": 0.01,
+      "label_smoothing": 0.05,
+      "patience": 12,
+      "warmup_epochs": 3,
+      "grad_clip": 1.0,
+      "class_weights": false
+    },
+    "augment": {
+      "names": [],
+      "p": 0.5
+    },
+    "pretrained": null,
+    "label_fraction": 1.0,
+    "name": "resnet1d",
+    "model": {
+      "name": "resnet1d",
+      "params": {
+        "widths": [
+          32,
+          64,
+          128
+        ],
+        "blocks": [
+          1,
+          1,
+          1
+        ],
+        "kernel": 5,
+        "dropout": 0.3,
+        "use_se": true,
+        "use_attn_pool": true
+      }
+    },
+    "tune_grid": {
+      "train.lr": [
+        0.003,
+        0.001,
+        0.0003
+      ]
+    }
+  },
+  "n_train_windows": 5251,
+  "split": {
+    "train": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      11,
+      14,
+      16,
+      21,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "val": [
+      3,
+      15,
+      17,
+      19,
+      22,
+      30
+    ],
+    "test": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ]
+  },
+  "group": "ablation",
+  "variant": "no_aug"
+}

@@ -1,0 +1,13 @@
+error type,count,% of true class,example (test window idx / subject),likely cause (hypothesis)
+Sitting -> Standing,83,16.9,31 / S2,Both are static; phone on the waist has near-identical motion. Only the gravity direction (tilt) differs and it varies per person/posture.
+Upstairs -> Downstairs,37,7.9,739 / S9,Both stair activities share periodicity; separation depends on small amplitude/phase cues.
+Standing -> Sitting,35,6.6,312 / S4,Both are static; phone on the waist has near-identical motion. Only the gravity direction (tilt) differs and it varies per person/posture.
+Walking -> Downstairs,17,3.4,850 / S9,Same gait rhythm; downstairs has sharper impact peaks that vary with speed and subject.
+Upstairs -> Sitting,17,3.6,723 / S9,unclear - inspect example plot
+Walking -> Upstairs,6,1.2,1132 / S10,Same gait rhythm; stairs differ mainly by subtle vertical-acceleration amplitude.
+Upstairs -> Walking,3,0.6,1343 / S12,Same gait rhythm; stairs differ mainly by subtle vertical-acceleration amplitude.
+Walking -> Sitting,3,0.6,1139 / S10,unclear - inspect example plot
+Sitting -> Upstairs,2,0.4,790 / S9,unclear - inspect example plot
+Downstairs -> Walking,1,0.2,2020 / S18,Same gait rhythm; downstairs has sharper impact peaks that vary with speed and subject.
+Sitting -> Laying,1,0.2,793 / S9,Occasional ambiguous orientation when the person reclines while sitting.
+Standing -> Downstairs,1,0.2,1362 / S12,unclear - inspect example plot

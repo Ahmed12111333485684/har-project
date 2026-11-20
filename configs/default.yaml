@@ -1,0 +1,23 @@
+# Shared settings. Every model config overrides only what differs.
+# SAME split, preprocessing, epochs/patience and tuning budget for all models.
+data:
+  root: data/raw
+  channels: all          # all | acc_only | gyro_only | total_acc_gyro
+  window_len: 128        # crop (centre) of the 128-sample window
+  val_subjects: 6
+  split_seed: 0          # fixed -> identical split for every model and seed
+train:
+  epochs: 60
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.01
+  label_smoothing: 0.05
+  patience: 12           # early stopping on validation macro-F1
+  warmup_epochs: 3
+  grad_clip: 1.0
+  class_weights: false
+augment:
+  names: [jitter, scaling, time_warp]
+  p: 0.5
+pretrained: null         # path to an SSL checkpoint (transformer only)
+label_fraction: 1.0

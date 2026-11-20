@@ -1,0 +1,290 @@
+{
+  "cost": {
+    "params": 113818,
+    "params_note": "tree nodes",
+    "size_mb": 12.854812,
+    "train_time_s": 1.337763786315918,
+    "inference_ms_per_window": 63.37096399976871,
+    "hardware": "GPU: NVIDIA GeForce GTX 1650 | CPU: AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD (12 threads)"
+  },
+  "epochs_run": null,
+  "best_epoch": null,
+  "val": {
+    "macro_f1": 0.9065926365026752,
+    "accuracy": 0.9119466920514041,
+    "balanced_accuracy": 0.909913204400748,
+    "per_class": {
+      "Walking": {
+        "precision": 0.9885057471264368,
+        "recall": 0.7678571428571429,
+        "f1": 0.864321608040201,
+        "support": 336
+      },
+      "Upstairs": {
+        "precision": 0.8726708074534162,
+        "recall": 0.9304635761589404,
+        "f1": 0.9006410256410257,
+        "support": 302
+      },
+      "Downstairs": {
+        "precision": 0.7993920972644377,
+        "recall": 0.9598540145985401,
+        "f1": 0.8723051409618574,
+        "support": 274
+      },
+      "Sitting": {
+        "precision": 0.9206798866855525,
+        "recall": 0.8736559139784946,
+        "f1": 0.896551724137931,
+        "support": 372
+      },
+      "Standing": {
+        "precision": 0.9181585677749361,
+        "recall": 0.9276485788113695,
+        "f1": 0.922879177377892,
+        "support": 387
+      },
+      "Laying": {
+        "precision": 0.9662921348314607,
+        "recall": 1.0,
+        "f1": 0.9828571428571429,
+        "support": 430
+      }
+    },
+    "confusion_matrix": [
+      [
+        258,
+        32,
+        46,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        281,
+        20,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        9,
+        263,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        325,
+        32,
+        15
+      ],
+      [
+        0,
+        0,
+        0,
+        28,
+        359,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        430
+      ]
+    ]
+  },
+  "test": {
+    "macro_f1": 0.8748748241238494,
+    "accuracy": 0.8754665761791652,
+    "balanced_accuracy": 0.8739425166727189,
+    "per_class": {
+      "Walking": {
+        "precision": 0.8832684824902723,
+        "recall": 0.9153225806451613,
+        "f1": 0.899009900990099,
+        "support": 496
+      },
+      "Upstairs": {
+        "precision": 0.8390342052313883,
+        "recall": 0.8853503184713376,
+        "f1": 0.8615702479338843,
+        "support": 471
+      },
+      "Downstairs": {
+        "precision": 0.9417989417989417,
+        "recall": 0.8476190476190476,
+        "f1": 0.8922305764411027,
+        "support": 420
+      },
+      "Sitting": {
+        "precision": 0.784,
+        "recall": 0.7983706720977597,
+        "f1": 0.7911200807265388,
+        "support": 491
+      },
+      "Standing": {
+        "precision": 0.8138195777351248,
+        "recall": 0.7969924812030075,
+        "f1": 0.805318138651472,
+        "support": 532
+      },
+      "Laying": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 537
+      }
+    },
+    "confusion_matrix": [
+      [
+        454,
+        25,
+        17,
+        0,
+        0,
+        0
+      ],
+      [
+        49,
+        417,
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        11,
+        53,
+        356,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        392,
+        97,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        108,
+        424,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        537
+      ]
+    ],
+    "macro_f1_ci95_subject_bootstrap": [
+      0.8276310918249515,
+      0.9165735335275615
+    ]
+  },
+  "model": "rf",
+  "seed": 2,
+  "config": {
+    "data": {
+      "root": "data/raw",
+      "channels": "acc_only",
+      "window_len": 128,
+      "val_subjects": 6,
+      "split_seed": 0
+    },
+    "train": {
+      "epochs": 60,
+      "batch_size": 64,
+      "lr": 0.001,
+      "weight_decay": 0.01,
+      "label_smoothing": 0.05,
+      "patience": 12,
+      "warmup_epochs": 3,
+      "grad_clip": 1.0,
+      "class_weights": false
+    },
+    "augment": {
+      "names": [
+        "jitter",
+        "scaling",
+        "time_warp"
+      ],
+      "p": 0.5
+    },
+    "pretrained": null,
+    "label_fraction": 1.0,
+    "name": "rf",
+    "model": {
+      "name": "rf",
+      "params": {
+        "n_estimators": 300,
+        "max_depth": 20
+      }
+    },
+    "tune_grid": {
+      "model.params.max_depth": [
+        10,
+        20,
+        null
+      ]
+    }
+  },
+  "n_train_windows": 5251,
+  "split": {
+    "train": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      11,
+      14,
+      16,
+      21,
+      23,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "val": [
+      3,
+      15,
+      17,
+      19,
+      22,
+      30
+    ],
+    "test": [
+      2,
+      4,
+      9,
+      10,
+      12,
+      13,
+      18,
+      20,
+      24
+    ]
+  },
+  "group": "ablation",
+  "variant": "no_gyro"
+}

@@ -1,0 +1,5 @@
+name: cnn_bilstm
+model:
+  name: cnn_bilstm
+  params: {channels: [64, 128], kernel: 5, lstm_hidden: 64, dropout: 0.3, use_lstm: true}
+tune_grid: {train.lr: [0.003, 0.001, 0.0003]}

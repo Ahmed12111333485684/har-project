@@ -1,0 +1,10 @@
+error type,count,% of true class,example (test window idx / subject),likely cause (hypothesis)
+Sitting -> Standing,87,17.7,31 / S2,Both are static; phone on the waist has near-identical motion. Only the gravity direction (tilt) differs and it varies per person/posture.
+Standing -> Sitting,66,12.4,305 / S4,Both are static; phone on the waist has near-identical motion. Only the gravity direction (tilt) differs and it varies per person/posture.
+Downstairs -> Upstairs,52,12.4,109 / S2,Both stair activities share periodicity; separation depends on small amplitude/phase cues.
+Upstairs -> Walking,17,3.6,609 / S4,Same gait rhythm; stairs differ mainly by subtle vertical-acceleration amplitude.
+Walking -> Downstairs,14,2.8,1151 / S10,Same gait rhythm; downstairs has sharper impact peaks that vary with speed and subject.
+Downstairs -> Walking,10,2.4,1329 / S12,Same gait rhythm; downstairs has sharper impact peaks that vary with speed and subject.
+Walking -> Upstairs,7,1.4,1802 / S13,Same gait rhythm; stairs differ mainly by subtle vertical-acceleration amplitude.
+Upstairs -> Downstairs,5,1.1,610 / S4,Both stair activities share periodicity; separation depends on small amplitude/phase cues.
+Sitting -> Upstairs,2,0.4,791 / S9,unclear - inspect example plot

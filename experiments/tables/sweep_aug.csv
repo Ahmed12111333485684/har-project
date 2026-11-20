@@ -1,0 +1,9 @@
+model,variant,val_f1,seeds
+cnn_bilstm,names=[],0.987 ± 0.001,3
+cnn_bilstm,names=jitter,0.987 ± 0.001,3
+cnn_bilstm,names=jitter-scaling-time_warp,0.987 ± 0.000,3
+cnn_bilstm,names=time_warp,0.987 ± 0.001,3
+resnet1d,names=[],0.986 ± 0.004,3
+resnet1d,names=jitter,0.991 ± 0.004,3
+resnet1d,names=jitter-scaling-time_warp,0.990 ± 0.002,3
+resnet1d,names=time_warp,0.989 ± 0.005,3

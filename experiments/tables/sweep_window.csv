@@ -1,0 +1,10 @@
+model,variant,val_f1,seeds
+cnn_bilstm,window_len=128,0.987 ± 0.000,3
+cnn_bilstm,window_len=64,0.987 ± 0.001,3
+cnn_bilstm,window_len=96,0.987 ± 0.001,3
+resnet1d,window_len=128,0.990 ± 0.002,3
+resnet1d,window_len=64,0.986 ± 0.002,3
+resnet1d,window_len=96,0.990 ± 0.003,3
+transformer,window_len=128,0.982 ± 0.004,3
+transformer,window_len=64,0.974 ± 0.004,3
+transformer,window_len=96,0.980 ± 0.003,3
