@@ -71,3 +71,4 @@ _Fill in your own hardware/runtimes from Table 7 (`experiments/tables/table7_cos
 * Dataset: Anguita, Ghio, Oneto, Parra, Reyes-Ortiz, "A Public Domain Dataset for Human Activity Recognition Using Smartphones", ESANN 2013.
 * DeepConvLSTM idea: Ordonez & Roggen 2016. Transformer: Vaswani et al. 2017. ResNet: He et al. 2016. SE: Hu et al. 2018. Masked reconstruction: He et al. 2022 (MAE) - all re-implemented by us, no external model code or pretrained weights used.
 * Libraries: PyTorch, scikit-learn, SciPy, pandas, matplotlib, Gradio.
+* google drive "https://drive.google.com/drive/folders/1PV70kzjF7pL0Uwxh4FKtP9gM-XAPIhQL?usp=sharing"
